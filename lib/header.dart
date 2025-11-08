@@ -186,6 +186,7 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     onTap: () => scrollToSection(homeKey),
                   ),
+
                   ListTile(
                     title: Text(
                       'About',
@@ -195,8 +196,12 @@ class PortfolioHeader extends StatelessWidget {
                       Icons.arrow_forward_ios,
                       color: Color.fromRGBO(183, 117, 255, 1.0),
                     ),
-                    onTap: () => scrollToSection(aboutKey),
+                    onTap: () {
+                      Navigator.pop(context); // Close Drawer
+                      scrollToSection(aboutKey);
+                    },
                   ),
+
                   ListTile(
                     title: Text(
                       'Education',
@@ -207,7 +212,10 @@ class PortfolioHeader extends StatelessWidget {
                       color: Color.fromARGB(255, 183, 117, 255),
                       //color: Colors.purpleAccent,
                     ),
-                    onTap: () => scrollToSection(educationKey),
+                    onTap: () {
+                      Navigator.pop(context);
+                      scrollToSection(educationKey);
+                    },
                   ),
 
                   ListTile(
@@ -221,7 +229,10 @@ class PortfolioHeader extends StatelessWidget {
 
                       //color: Colors.purpleAccent,
                     ),
-                    onTap: () => scrollToSection(skillsKey),
+                    onTap: () {
+                      Navigator.pop(context); // Close Drawer
+                      scrollToSection(skillsKey);
+                    },
                   ),
 
                   ListTile(
@@ -235,7 +246,10 @@ class PortfolioHeader extends StatelessWidget {
 
                       //color: Colors.purpleAccent,
                     ),
-                    onTap: () => scrollToSection(projectKey),
+                    onTap: () {
+                      Navigator.pop(context); // Close Drawer
+                      scrollToSection(projectKey);
+                    },
                   ),
 
                   ListTile(
@@ -247,7 +261,10 @@ class PortfolioHeader extends StatelessWidget {
                       Icons.arrow_forward_ios,
                       color: Color.fromARGB(255, 183, 117, 255),
                     ),
-                    onTap: () => scrollToSection(contactKey),
+                    onTap: () {
+                      Navigator.pop(context); // Close Drawer
+                      scrollToSection(contactKey);
+                    },
                   ),
                 ],
               ),

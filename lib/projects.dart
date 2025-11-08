@@ -37,7 +37,7 @@ class ProjectsSection extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "LATEST ",
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -46,7 +46,7 @@ class ProjectsSection extends StatelessWidget {
                   ),
                   TextSpan(
                     text: "PROJECTS",
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: const Color.fromARGB(255, 183, 117, 255),

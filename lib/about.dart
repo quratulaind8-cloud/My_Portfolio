@@ -11,10 +11,9 @@ class AboutPage extends StatelessWidget {
     final isMobile = screenWidth < 600;
     final isTablet = screenWidth >= 600 && screenWidth < 1024;
     final isLaptop = screenWidth >= 1024;
-
-    return SingleChildScrollView(
+    return Container(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 50),
+        padding: EdgeInsets.symmetric(vertical: 50),
         child: Column(
           children: [
             // ======= Heading =======
@@ -171,7 +170,7 @@ class _StatColumn extends StatelessWidget {
   final String label1;
   final String label2;
 
-  const _StatColumn({
+  _StatColumn({
     required this.value,
     required this.label1,
     required this.label2,

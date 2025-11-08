@@ -85,7 +85,7 @@ class _ContactFormState extends State<ContactForm> {
 
     return SafeArea(
       child: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Center(
           child: Container(
             width: containerWidth,
@@ -118,7 +118,7 @@ class _ContactFormState extends State<ContactForm> {
                 // Fields
                 if (isMobile) ...[
                   _buildTextField("Full Name", nameController),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   _buildTextField(
                     "Email",
                     emailController,
@@ -168,7 +168,7 @@ class _ContactFormState extends State<ContactForm> {
 
                 SizedBox(height: 20),
                 _buildMessageBox(),
-                const SizedBox(height: 40),
+                SizedBox(height: 40),
 
                 // Button
                 ElevatedButton(
