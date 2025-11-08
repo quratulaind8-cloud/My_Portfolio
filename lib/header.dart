@@ -39,7 +39,7 @@ class PortfolioHeader extends StatelessWidget {
         title: Text(
           'Qurat-UL-Ain ',
           style: GoogleFonts.poppins(
-            color: Color.fromARGB(255, 122, 80, 129),
+            color: Color.fromRGBO(183, 117, 255, 1.0),
             fontWeight: FontWeight.bold,
           ),
         ),
