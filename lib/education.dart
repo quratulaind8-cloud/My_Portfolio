@@ -17,12 +17,17 @@ class EducationSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Icon(Icons.school, size: 34, color: Colors.purpleAccent),
+          const Icon(
+            Icons.school,
+            size: 34,
+            color: Color.fromARGB(255, 183, 117, 255),
+          ),
           const SizedBox(width: 8),
           Text(
             'Education',
             style: GoogleFonts.montserrat(
-              color: Colors.purpleAccent,
+              color: Color.fromARGB(255, 183, 117, 255),
+
               fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
@@ -33,7 +38,7 @@ class EducationSection extends StatelessWidget {
           if (isLaptop) ...[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 _EducationCard(
                   degree: "Matriculation in Science",
                   institute: "Excel School",
@@ -50,10 +55,10 @@ class EducationSection extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 40),
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 _EducationCard(
                   degree: "BS in Computer Science",
                   institute: "Lahore College for Women University",
@@ -124,8 +129,9 @@ class _EducationCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.purple.withOpacity(0.3),
-            blurRadius: 40,
+            //color: Colors.purple.withOpacity(0.1),
+            color: Color.fromARGB(255, 183, 117, 255).withOpacity(0.5),
+            blurRadius: 30,
             spreadRadius: 3,
           ),
         ],
@@ -150,7 +156,8 @@ class _EducationCard extends StatelessWidget {
           Text(
             year,
             style: GoogleFonts.poppins(
-              color: Colors.purpleAccent,
+              color: Color.fromARGB(255, 183, 117, 255),
+
               fontSize: 14,
             ),
           ),

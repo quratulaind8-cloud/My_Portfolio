@@ -17,7 +17,9 @@ class ProjectsSection extends StatelessWidget {
           color: const Color(0xFF111111),
           boxShadow: [
             BoxShadow(
-              color: Colors.purple.withOpacity(0.3),
+              color: const Color.fromARGB(255, 183, 117, 255).withOpacity(0.3),
+
+              //color: Colors.purple.withOpacity(0.3),
               blurRadius: 40,
               spreadRadius: 3,
             ),
@@ -31,7 +33,7 @@ class ProjectsSection extends StatelessWidget {
             // ======= Title =======
             RichText(
               textAlign: TextAlign.center,
-              text: const TextSpan(
+              text: TextSpan(
                 children: [
                   TextSpan(
                     text: "LATEST ",
@@ -47,7 +49,7 @@ class ProjectsSection extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      color: Colors.purpleAccent,
+                      color: const Color.fromARGB(255, 183, 117, 255),
                       letterSpacing: 1.2,
                     ),
                   ),

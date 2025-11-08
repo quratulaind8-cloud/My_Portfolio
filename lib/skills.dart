@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SkillsSection extends StatelessWidget {
-  SkillsSection({super.key});
+  const SkillsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,24 +11,44 @@ class SkillsSection extends StatelessWidget {
     final isMobile = screenWidth < 600;
     final isTablet = screenWidth >= 600 && screenWidth < 1024;
 
-    // Number of columns depending on screen
+    // Grid column count based on device size
     int crossAxisCount = isMobile
-        ? 3
+        ? 2
         : isTablet
         ? 3
         : 4;
 
+    // Responsive padding for outer layout
+    final outerPadding = EdgeInsets.symmetric(
+      horizontal: isMobile
+          ? 20
+          : isTablet
+          ? 60
+          : 100,
+      vertical: isMobile ? 40 : 80,
+    );
+
+    // Responsive title size
+    final titleFontSize = isMobile
+        ? 22.0
+        : isTablet
+        ? 26.0
+        : 32.0;
+
     return Padding(
-      padding: const EdgeInsets.all(40),
+      padding: outerPadding,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+        padding: EdgeInsets.symmetric(
+          vertical: isMobile ? 30 : 50,
+          horizontal: isMobile ? 15 : 30,
+        ),
         decoration: BoxDecoration(
-          color: const Color(0xFF111111),
+          color: Color(0xFF111111),
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
-              color: Colors.purple.withOpacity(0.3),
+              color: Color.fromARGB(255, 183, 117, 255).withOpacity(0.3),
               blurRadius: 40,
               spreadRadius: 3,
             ),
@@ -41,12 +61,12 @@ class SkillsSection extends StatelessWidget {
             // ===== Title =====
             RichText(
               textAlign: TextAlign.center,
-              text: const TextSpan(
+              text: TextSpan(
                 children: [
                   TextSpan(
                     text: "MY ",
-                    style: TextStyle(
-                      fontSize: 30,
+                    style: GoogleFonts.poppins(
+                      fontSize: titleFontSize,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       letterSpacing: 1.2,
@@ -54,10 +74,10 @@ class SkillsSection extends StatelessWidget {
                   ),
                   TextSpan(
                     text: "SKILLS",
-                    style: TextStyle(
-                      fontSize: 30,
+                    style: GoogleFonts.poppins(
+                      fontSize: titleFontSize,
                       fontWeight: FontWeight.bold,
-                      color: Colors.purpleAccent,
+                      color: Color.fromARGB(255, 183, 117, 255),
                       letterSpacing: 1.2,
                     ),
                   ),
@@ -67,14 +87,14 @@ class SkillsSection extends StatelessWidget {
 
             SizedBox(height: 40),
 
-            // ===== Grid of Skill Containers =====
+            // ===== Skills Grid =====
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: crossAxisCount,
-              crossAxisSpacing: 40,
-              mainAxisSpacing: 40,
-              childAspectRatio: 1,
+              crossAxisSpacing: isMobile ? 20 : 40,
+              mainAxisSpacing: isMobile ? 20 : 40,
+              childAspectRatio: isMobile ? 1.2 : 1,
               children: const [
                 _SkillBox(title: "Flutter"),
                 _SkillBox(title: "Dart"),
@@ -91,7 +111,7 @@ class SkillsSection extends StatelessWidget {
   }
 }
 
-// ====== Skill Container Widget ======
+// ====== Individual Skill Box ======
 class _SkillBox extends StatelessWidget {
   final String title;
 
@@ -99,16 +119,19 @@ class _SkillBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
+
     return Container(
       decoration: BoxDecoration(
         color: const Color(0xFF1A1A1A),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.purpleAccent.withOpacity(0.5),
+            color: const Color.fromARGB(255, 183, 117, 255).withOpacity(0.4),
             blurRadius: 15,
-            spreadRadius: 3,
-            offset: const Offset(0, 0),
+            spreadRadius: 2,
+            offset: Offset(0, 0),
           ),
         ],
       ),
@@ -117,7 +140,7 @@ class _SkillBox extends StatelessWidget {
           title,
           style: GoogleFonts.poppins(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: isMobile ? 14 : 18,
             fontWeight: FontWeight.w500,
           ),
           textAlign: TextAlign.center,

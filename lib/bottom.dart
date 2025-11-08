@@ -3,17 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatelessWidget {
-  const ContactPage({super.key});
+  ContactPage({super.key});
 
   // Email launcher
   void _sendEmail() async {
     final Uri emailUri = Uri(
       scheme: 'mailto',
       path: 'quratulaind@8gmail.com',
-      queryParameters: {
-        'subject': 'Hello Qurat-Ul-Ain',
-        'body': 'Hi! I want to connect with you!',
-      },
+      query: 'subject=Hello Qurat-Ul-Ain=I want to connect with you!',
     );
 
     if (await canLaunchUrl(emailUri)) {
@@ -56,7 +53,9 @@ class ContactPage extends StatelessWidget {
         Text(
           "Contact Me",
           style: GoogleFonts.montserrat(
-            color: Colors.purpleAccent,
+            //color: Colors.purpleAccent,
+            color: Color.fromARGB(255, 183, 117, 255),
+
             fontSize: 26,
             fontWeight: FontWeight.bold,
           ),
@@ -64,7 +63,6 @@ class ContactPage extends StatelessWidget {
 
         SizedBox(height: 20),
 
-        // ---------- Contact Info ----------
         Padding(
           padding: const EdgeInsets.all(20),
           child: (isDesktop || isTablet)
@@ -141,7 +139,12 @@ class ContactPage extends StatelessWidget {
       onTap: onTap,
       child: Column(
         children: [
-          Icon(icon, color: Colors.purpleAccent, size: 30),
+          Icon(
+            icon, //color: Colors.purpleAccent,
+            color: Color.fromARGB(255, 183, 117, 255),
+
+            size: 30,
+          ),
           SizedBox(height: 10),
           Text(
             label,

@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
         horizontal: isMobile ? 20 : 60,
       ),
       child: Column(
-        //mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: isMobile ? 90 : 0),
 
@@ -52,7 +52,8 @@ class HomePage extends StatelessWidget {
             "Hi, I'm Qurat-Ul-Ain Dawood",
             textAlign: TextAlign.center,
             style: GoogleFonts.poppins(
-              color: Colors.purpleAccent,
+              color: Color.fromARGB(255, 183, 117, 255),
+
               fontSize: subHeadingSize,
               fontWeight: FontWeight.w500,
             ),
@@ -103,7 +104,7 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
             onPressed: () => scrollToSection(projectKey),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.purpleAccent,
+              backgroundColor: Color.fromARGB(255, 183, 117, 255),
               padding: EdgeInsets.symmetric(
                 horizontal: isMobile ? 25 : 40,
                 vertical: isMobile ? 12 : 18,

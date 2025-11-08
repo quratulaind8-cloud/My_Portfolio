@@ -37,20 +37,20 @@ class PortfolioHeader extends StatelessWidget {
         backgroundColor: Colors.black,
         elevation: 0,
         title: Text(
-          'Qurat-UL-Ain Dawood',
+          'Qurat-UL-Ain ',
           style: GoogleFonts.poppins(
-            color: Colors.purpleAccent,
+            color: Color.fromARGB(255, 122, 80, 129),
             fontWeight: FontWeight.bold,
           ),
         ),
-        iconTheme: IconThemeData(color: Colors.purpleAccent),
+        iconTheme: IconThemeData(color: Color.fromRGBO(183, 117, 255, 1.0)),
         actions: (isDesktop || isTablet)
             ? [
                 Row(
                   children: [
                     InkWell(
                       onTap: () => scrollToSection(homeKey),
-                      splashColor: Colors.purpleAccent,
+                      splashColor: Color.fromRGBO(183, 117, 255, 1.0),
 
                       borderRadius: BorderRadius.circular(5),
                       child: Padding(
@@ -58,6 +58,7 @@ class PortfolioHeader extends StatelessWidget {
                           horizontal: 16,
                           vertical: 8,
                         ),
+
                         child: Text(
                           'Home',
                           style: GoogleFonts.poppins(color: Colors.white),
@@ -67,14 +68,14 @@ class PortfolioHeader extends StatelessWidget {
 
                     InkWell(
                       onTap: () => scrollToSection(aboutKey),
-                      splashColor: Colors.purpleAccent,
+                      splashColor: Color.fromARGB(255, 183, 117, 255),
+                      //splashColor: Colors.purpleAccent,
                       borderRadius: BorderRadius.circular(5),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 8,
                         ),
-
                         child: Text(
                           'About',
                           style: GoogleFonts.poppins(color: Colors.white),
@@ -84,7 +85,8 @@ class PortfolioHeader extends StatelessWidget {
 
                     InkWell(
                       onTap: () => scrollToSection(educationKey),
-                      splashColor: Colors.purpleAccent,
+                      //splashColor: Colors.purpleAccent,
+                      splashColor: Color.fromARGB(255, 183, 117, 255),
                       borderRadius: BorderRadius.circular(5),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
@@ -98,9 +100,11 @@ class PortfolioHeader extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     InkWell(
                       onTap: () => scrollToSection(skillsKey),
-                      splashColor: Colors.purpleAccent,
+                      splashColor: Color.fromARGB(255, 183, 117, 255),
+                      //splashColor: Colors.purpleAccent,
                       borderRadius: BorderRadius.circular(5),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
@@ -117,7 +121,8 @@ class PortfolioHeader extends StatelessWidget {
 
                     InkWell(
                       onTap: () => scrollToSection(projectKey),
-                      splashColor: Colors.purpleAccent,
+                      //splashColor: Colors.purpleAccent,
+                      splashColor: Color.fromARGB(255, 183, 117, 255),
                       borderRadius: BorderRadius.circular(5),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
@@ -137,7 +142,7 @@ class PortfolioHeader extends StatelessWidget {
                       padding: EdgeInsets.only(right: 20),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.purpleAccent,
+                          backgroundColor: Color.fromARGB(255, 183, 117, 255),
                         ),
                         onPressed: () => scrollToSection(contactKey),
                         child: Text(
@@ -158,7 +163,9 @@ class PortfolioHeader extends StatelessWidget {
               child: ListView(
                 children: [
                   DrawerHeader(
-                    decoration: BoxDecoration(color: Colors.purpleAccent),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(183, 117, 255, 1.0),
+                    ),
                     child: Text(
                       'Menu',
                       style: GoogleFonts.montserrat(
@@ -175,7 +182,7 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.purpleAccent,
+                      color: Color.fromRGBO(183, 117, 255, 1.0),
                     ),
                     onTap: () => scrollToSection(homeKey),
                   ),
@@ -186,7 +193,7 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.purpleAccent,
+                      color: Color.fromRGBO(183, 117, 255, 1.0),
                     ),
                     onTap: () => scrollToSection(aboutKey),
                   ),
@@ -197,10 +204,12 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.purpleAccent,
+                      color: Color.fromARGB(255, 183, 117, 255),
+                      //color: Colors.purpleAccent,
                     ),
                     onTap: () => scrollToSection(educationKey),
                   ),
+
                   ListTile(
                     title: Text(
                       'Skills',
@@ -208,10 +217,13 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.purpleAccent,
+                      color: Color.fromARGB(255, 183, 117, 255),
+
+                      //color: Colors.purpleAccent,
                     ),
                     onTap: () => scrollToSection(skillsKey),
                   ),
+
                   ListTile(
                     title: Text(
                       'Projects',
@@ -219,7 +231,9 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.purpleAccent,
+                      color: Color.fromARGB(255, 183, 117, 255),
+
+                      //color: Colors.purpleAccent,
                     ),
                     onTap: () => scrollToSection(projectKey),
                   ),
@@ -231,7 +245,7 @@ class PortfolioHeader extends StatelessWidget {
                     ),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.purpleAccent,
+                      color: Color.fromARGB(255, 183, 117, 255),
                     ),
                     onTap: () => scrollToSection(contactKey),
                   ),
@@ -250,19 +264,20 @@ class PortfolioHeader extends StatelessWidget {
                 projectKey: projectKey,
               ),
             ),
-            SizedBox(height: 40),
+
+            SizedBox(height: 15),
             Container(key: aboutKey, child: AboutPage()),
 
-            SizedBox(height: 50),
+            SizedBox(height: 25),
             Container(key: educationKey, child: EducationSection()),
 
-            SizedBox(height: 35),
+            SizedBox(height: 25),
             Container(key: skillsKey, child: SkillsSection()),
 
             SizedBox(height: 35),
             Container(key: projectKey, child: ProjectsSection()),
 
-            SizedBox(height: 50),
+            SizedBox(height: 40),
             Container(key: contactKey, child: ContactForm()),
 
             SizedBox(height: 30),

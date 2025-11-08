@@ -21,7 +21,8 @@ class AboutPage extends StatelessWidget {
             Text(
               "About Me",
               style: GoogleFonts.montserrat(
-                color: Colors.purpleAccent,
+                color: Color.fromARGB(255, 183, 117, 255),
+
                 fontSize: isMobile
                     ? 26
                     : isTablet
@@ -51,7 +52,8 @@ class AboutPage extends StatelessWidget {
                 ),
 
                 child: Text(
-                  "Hi! I’m Qurat-ul-Ain, a BSCS student and an aspiring Flutter developer who loves creating clean, responsive, and user-friendly mobile apps. I enjoy transforming creative ideas into real-world applications that solve everyday problems. My passion for app development began with curiosity about how technology shapes our daily lives. Since then, I’ve been learning Flutter, exploring UI/UX design, and building projects that help me grow as a developer. I’m always eager to learn, experiment, and take on new challenges that improve my skills and creativity.",
+                  "Hi! I’m Qurat-ul-Ain, a BSCS student and an aspiring Flutter developer who loves creating clean, responsive, and user-friendly mobile apps.I enjoy transforming creative ideas into real-world applications that solve everyday problems."
+                  "\n My passion for app development began with curiosity about how technology shapes our daily lives. Since then, I’ve been learning Flutter, exploring UI/UX design, and building projects that help me grow as a developer. I’m always eager to learn, experiment, and take on new challenges that improve my skills and creativity.",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     color: Colors.white70,
@@ -93,7 +95,9 @@ class AboutPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.purple.withOpacity(0.3),
+                    color: Color.fromARGB(255, 183, 117, 255).withOpacity(0.3),
+
+                    //color: Colors.purple.withOpacity(0.3),
                     blurRadius: 40,
                     spreadRadius: 3,
                     offset: Offset(0, 0),
@@ -208,7 +212,8 @@ class _StatColumn extends StatelessWidget {
                       ? 32
                       : 36,
                   fontWeight: FontWeight.bold,
-                  color: Colors.purpleAccent.shade100,
+                  //color: Colors.purpleAccent.shade100,
+                  color: Color.fromARGB(255, 183, 117, 255),
                 ),
               ),
             ],
